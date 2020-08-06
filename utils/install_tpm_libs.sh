@@ -104,7 +104,7 @@ install_tpm2tssengine()
     cd tpm2-tss-engine-$TPM2_TSS_ENGINE_VER
 
     ./bootstrap
-    ./configure
+    ./configure --with-enginesdir=/usr/local/lib/engines-1.1/
     make -j$(nproc)
     sudo make install
 }
